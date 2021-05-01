@@ -35,6 +35,18 @@ public class Word {
 			return false;
 		return true;
 	}
+	public String getAlienWord() {
+		return alienWord;
+	}
+	public void setAlienWord(String alienWord) {
+		this.alienWord = alienWord;
+	}
+	public String getTranslation() {
+		return translation;
+	}
+	public void setTranslation(String translation) {
+		this.translation = translation;
+	}
 	@Override
 	public String toString() {
 		return "Word [alienWord=" + alienWord + ", translation=" + translation + "]";
