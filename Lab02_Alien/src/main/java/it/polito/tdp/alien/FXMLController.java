@@ -1,6 +1,7 @@
 package it.polito.tdp.alien;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.StringTokenizer;
 
@@ -69,8 +70,9 @@ public class FXMLController {
 	    		return;
 			}
 			String translation = alienDictionary.translateWord(alienWord);
-			if(translation!=null)
+			if(translation!=null) {
 				txtOutput.setText(translation);
+			}
 			else {
 				txtOutput.setText("La parola cercata non è presente");
     		return;

@@ -4,25 +4,26 @@ import java.util.*;
 
 public class AlienDictionary {
 
-	List<Word> dizionario = new ArrayList<Word>();
+	List<WordEnanched> dizionario = new ArrayList<WordEnanched>();
 	
 	public void addWord(String alienWord, String translation) {
 		boolean trovato= false;
-		for(Word w : dizionario) {
+		for(WordEnanched w : dizionario) {
 			if(w.getAlienWord().equals(alienWord)) {
 				w.setTranslation(translation);
 				trovato=true;
 			}
 		}
 		if(trovato==false) {
-			Word parola = new Word(alienWord, translation);
+			WordEnanched parola = new WordEnanched(alienWord, translation);
+			parola.setTranslation(translation);
 			dizionario.add(parola);
 		}
 		
 	}
 	
 	public String translateWord(String alienWord) {
-		Word parola = new Word(alienWord);
+		WordEnanched parola = new WordEnanched(alienWord);
 		if(dizionario.contains(parola)) {
 			return dizionario.get(dizionario.indexOf(parola)).getTranslation();
 		}
